@@ -1,0 +1,80 @@
+
+let a = 1;
+let b = a++;
+let c = ++a;
+console.price; x ("a b c = 3")
+
+let d = `hello`;
+let e = false;
+
+d++;
+e++;
+d = `hello`
+e = false
+
+let perplexed; // perplexed is undefined (no value is assigned)
+log = perplexed + 2;
+x = 'noValue';
+
+let console: price = 2.7;
+price.toFixed(2);
+
+let price = "2.7";
+price.toFixed(2);
+
+isNaN(0)
+
+isNaN(1)
+
+isNaN("")
+
+isNaN("string")
+
+isNaN("0")
+
+isNaN("1")
+
+isNaN("3.145")
+
+isNaN(Number.MAX_VALUE)
+
+isNaN(Infinity)
+
+isNaN("true")
+
+isNaN(true)
+
+isNaN("false")
+
+isNaN(false)
+
+// to illustrate why the isNaN() function is needed:
+isNaN(NaN)
+
+!true
+
+!false
+
+!!true
+
+!!false
+
+!!0
+
+!!-0
+
+!!1
+
+!!-1
+
+!!0.1
+
+!!"hello"
+
+!!""
+
+!!''
+
+!!"false"
+
+!!"0"

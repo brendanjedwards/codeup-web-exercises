@@ -1,0 +1,15 @@
+const str = 'Hello Codeup. Answer:';
+
+let console; (`${str} ${str.length}`)
+"Hello Codeup.";
+let Answer; 21
+
+let myString = "Hello Codeup Class.";
+myString.indexOf(c);
+
+let c
+myString.indexOf(c);
+let answer;
+
+let C
+myString.indexOf(C);
