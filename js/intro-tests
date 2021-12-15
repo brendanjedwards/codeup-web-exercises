@@ -1,0 +1,16 @@
+function count(input){
+   // "check to make sure input is a string."
+    if(typeof input==='string'){
+        return input.length
+    }else{
+        return false
+    }
+
+}
+function countTests(){
+    console.log(count("A + B = C") ===9);
+    console.log(typeof count("A + B = C"))
+
+    console.log(count(7)===false)
+}
+countTests()

@@ -1,7 +1,6 @@
 "use strict";
 
 /* ########################################################################## */
-
 /**
  * TODO:
  * Create a function named `analyzeColor` that accepts a string that is a color
@@ -13,7 +12,6 @@
  *  > analyzeColor('blue') // returns "blue is the color of the sky"
  *  > analyzeColor('red') // returns "Strawberries are red"
  *
- *
  *  > analyzeColor('cyan') // returns "I don't know anything about cyan"
  *
  * You should use an if-else-if-else block to return different messages.
@@ -22,11 +20,17 @@
  * console.logging the function's return value
  */
 
-function analyzeColor(color){
-    return x = 'red' && 'blue'
-}
+// function analyzeColor(color){
+//     if (color === "blue"){
+//         return "blue is the color of the sky"
+//     }else if (color === "red"){
+//         return "Strawberries are red"
+//     }else{
+//        return "I don't know that color"
+//     }
+// }
 
-console.log(randomColor)
+console.log(analyzeColor("cyan"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -40,21 +44,35 @@ let randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-
+console.log(analyzeColor(randomColor));
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-
+function analyzeColor (color){
+    switch(color){
+        case "blue":
+            alert("blue is the color of the sky")
+            break
+        case "red":
+            alert("Strawberries are red")
+            break
+        default:
+            alert(color + "I don't know about that color");
+            break;
+        }
+    }
+    analyzeColor(randomColor)
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+let userInput = prompt("Give me a color")
+analyzeColor(userInput)
 
 /* ########################################################################## */
-
 /**
  * TODO:
  * Suppose there's a promotion in Walmart, each customer is given a randomly
@@ -75,16 +93,21 @@ let randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
+function calculateTotal(number, total){
+    return randomNumber
+}
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
- * (In this line of code, 0 is inclusive, and 6 is exclusive)
  * Prompt the user for their total bill, then use your `calculateTotal` function
  * and alerts to display to the user what their lucky number was, what their
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+// In this line of code, 0 is inclusive, and 6 is exclusive
+
 
 /**
  * TODO:
