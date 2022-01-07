@@ -1,5 +1,5 @@
 // Write a function named getFizzBuzz(startingNum) which performs the following actions:
-//     If startingNum is divisible by 3
+// If startingNum is divisible by 3
 // console log "fizz"
 // Else, if startingNum is divisible by 5
 // console log "buzz"

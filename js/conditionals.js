@@ -1,5 +1,4 @@
 "use strict";
-
 /* ########################################################################## */
 /**
  * TODO:
@@ -30,47 +29,47 @@
 //     }
 // }
 
-console.log(analyzeColor("cyan"));
+//console.log (analyzeColor (randomColor));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-let randomColor = colors[Math.floor(Math.random() * colors.length)];
+//let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+//let randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-console.log(analyzeColor(randomColor));
+//console.log(analyzeColor % randomColor);
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
-function analyzeColor (color){
-    switch(color){
-        case "blue":
-            alert("blue is the color of the sky")
-            break
-        case "red":
-            alert("Strawberries are red")
-            break
-        default:
-            alert(color + "I don't know about that color");
-            break;
-        }
-    }
-    analyzeColor(randomColor)
+// function analyzeColor (color){
+//     switch(color){
+//         case "blue":
+//             alert("blue is the color of the sky")
+//             break
+//         case "red":
+//             alert("Strawberries are red")
+//             break
+//         default:
+//             alert(color + "I don't know about that color");
+//             break;
+//         }
+//     }
+//     analyzeColor(randomColor)
 /**
  * TODO:
  * Prompt the user for a color when the page loads, and pass the input from the
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-let userInput = prompt("Give me a color")
-analyzeColor(userInput)
+//let userInput = prompt("Give me a color")
+//analyzeColor(userInput)
 
 /* ########################################################################## */
 /**
@@ -92,10 +91,23 @@ analyzeColor(userInput)
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+console.log(calculateTotal)
 
-function calculateTotal(number, total){
-    return randomNumber
+function number() {
+    let i = 100
 }
+function total() {
+    let i = .88
+}
+
+calculateTotal(number, total);
+     `(number === 100, total === (number * .88)`;{
+     }
+    calculateTotal(0, 100);{
+}   calculateTotal(4, 100);{
+}   calculateTotal(5, 100);{
+}
+
 
 /**
  * TODO:
@@ -108,22 +120,18 @@ function calculateTotal(number, total){
 // var luckyNumber = Math.floor(Math.random() * 6);
 // In this line of code, 0 is inclusive, and 6 is exclusive
 
-
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
  * would like to enter a number. If they click 'Ok', prompt the user for a
  * number, then use 3 separate alerts to tell the user:
- *
  * - whether the number is even or odd
  * - what the number plus 100 is
  * - if the number is negative or positive
- *
  * Do *NOT* display any of the above information
  * if the user enters a value that is not of the number data type.
  * Instead, use an alert to inform them of the incorrect input data type.
- *
- *
+
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */

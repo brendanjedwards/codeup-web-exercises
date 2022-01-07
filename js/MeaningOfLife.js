@@ -1,6 +1,6 @@
-// getMeaningOfLife
-// Write a function named getMeaningOfLife which accepts one parameter, meaningfulNum. This function will use a while
-// loop to compare its current number (a variable named counter) against the meaningfulNum. While the counter is not
+console.log(getMeaningOfLife)
+// Write a function named getMeaningOfLife which accepts one parameter, meaningfulNum. This function will use a 'while
+// loop' to compare its current number (a variable named counter) against the meaningfulNum. While the counter is not
 // equivalent to the meaningfulNum, continue the loop. Once that condition is broken (i.e., the loop’s test fails),
 // console log a string telling the user "The meaning of life, the universe, and everything is [your meaningful number]"
 // Thinking about the above function, getMeaningOfLife, let’s ask a question: What happens if the value of meaningfulNum
