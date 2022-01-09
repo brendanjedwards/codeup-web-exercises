@@ -91,23 +91,27 @@
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-console.log(calculateTotal)
 
-function number() {
-    let i = 100
+function calculateTotal(number, total){
+    if (number === 0){
+        console.log("No Discount")
+    }else if (number === 1){
+        let discount10 = total - total * .10;
+        console.log(`Discount: 10%. New Total: $${discount10}`);
+    }else if (number === 2){
+        let discount25 = total - total * .25;
+        console.log(`Discount: 25%. New Total: $${discount25}`);
+    }else if (number === 3) {
+        let discount35 = total - total * .35;
+        console.log(`Discount: 35%. New Total: $${discount35}`);
+    }else if (number === 4) {
+        let discount50 = total - total * .50;
+        console.log(`Discount: 50%. New Total: $${discount50}`);
+    }else if (number === 5){
+        console.log("FREE")
+    }
 }
-function total() {
-    let i = .88
-}
-
-calculateTotal(number, total);
-     `(number === 100, total === (number * .88)`;{
-     }
-    calculateTotal(0, 100);{
-}   calculateTotal(4, 100);{
-}   calculateTotal(5, 100);{
-}
-
+calculateTotal(5, 100)
 
 /**
  * TODO:
@@ -119,6 +123,11 @@ calculateTotal(number, total);
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 // In this line of code, 0 is inclusive, and 6 is exclusive
+
+let userInput = prompt("What was you total bill?")
+const randomNumber = Math.trunc(Math.random()*6)
+
+calculateTotal(randomNumber, userInput)
 
 /**
  * TODO:
@@ -135,3 +144,29 @@ calculateTotal(number, total);
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+const userConfirm = confirm("Would you like to enter a number?");
+let userNumber = 0;
+if (userConfirm === true){
+    userNumber = parseInt(prompt("Do you want a number?"))
+}
+function isEvenOrOdd (number){
+    if (number % 2 === 0){
+        alert("Your number is Even");
+    }else{
+        alert("Your Number is Odd");
+    }
+}
+function isNumberPlus100(number){
+    alert(`${number + 100}`)
+}
+function isPosOrNeg (number){
+    if (number > 0){
+        alert("Positive")
+    }else if (number < 0){
+        alert("Negative")
+    }
+}
+isEvenOrOdd(userNumber);
+isNumberPlus100(userNumber);
+isPosOrNeg(userNumber);
