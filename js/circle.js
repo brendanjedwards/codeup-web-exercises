@@ -2,8 +2,8 @@
     "use strict";
 
     // create a circle object
-    var circle = {
-        radius: 3,
+    let circle = {
+        radius: 5,
 
         getArea: function () {
             // TODO: complete this method

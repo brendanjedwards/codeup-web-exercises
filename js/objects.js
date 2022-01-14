@@ -3,15 +3,20 @@
 
     /**
      * TODO:
-     * Create an object with firstName and lastName properties that are strings
-     * with your first and last name. Store this object in a variable named
+     * With your first and last name. Store this object in a variable named
      * `person`.
-     *
+     * Create an object with firstName and lastName properties that are strings
+     * w
      * Example:
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-
+let person = {
+    firstName: 'John',
+    lastName: 'Smith'
+}
+console.log(person.firstName);
+console.log(person.lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +26,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+person.sayHello = function (){
+    return `Hello from ${this.firstName} ${this.lastName}`;
+}
+console.log(person.sayHello())
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +46,21 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    let shoppers = [
+    {name: 'Cameron', amount: 180},
+    {name: 'Ryan', amount: 250},
+    {name: 'George', amount: 320},
+    ];
+
+    shoppers.forEach(function (shopper){
+        let discountedAmount = shopper.amount
+        let discount;
+        if (shopper.amount < 200){
+            discount = 12;
+            discountedAmount = .88 * shopper.amount;
+        }
+        console.log(`\nShopper: ${shopper.name}\nAmount Spent: $${shopper.amount}\nDiscount: ${discount}%\nFinal Total: $${discountedAmount}`)
+    })
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -55,6 +75,52 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    let books = [
+        {
+            title: 'Dune',
+            author: {
+                firstName: 'Frank',
+                lastName: 'Herbert'
+            }
+        },
+        {
+            title: 'I, Claudius',
+            author: {
+                firstName: 'Robert',
+                lastName: 'Frost'
+            }
+        },
+        {
+            title: 'To Kill a Mockingbird',
+            author: {
+                firstName: 'Harper',
+                lastName: 'Lee'
+            }
+        },
+        {
+            title: 'The Eaters of the Dead',
+            author: {
+                firstName: 'Michael',
+                lastName: 'Crichton'
+            }
+        },
+        {
+            title: 'said the Tick-Tock Man',
+            author: {
+                firstName: 'Harlan',
+                lastName: 'Ellison'
+            }
+        },
+    ]
+    {
+        let(index){
+        function index(number){
+        books.forEach(function (book, index){
+            console.log('Book # ' + (index + 1))
+            console.log('Title ' * books.title)
+            console.log('Author ' + book.author.firstName + ' ' + book.author.lastName)
+            console.log('---')
+        })
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -64,7 +130,6 @@
      * - author's full name (first name + last name)
      *
      * Example Console Output:
-     *
      *      Book # 1
      *      Title: The Salmon of Doubt
      *      Author: Douglas Adams
@@ -80,15 +145,4 @@
      *      ...
      */
 
-    /**
-     * Bonus:
-     * - Create a function named `createBook` that accepts a title and author
-     *   name and returns a book object with the properties described
-     *   previously. Refactor your code that creates the books array to instead
-     *   use your function.
-     * - Create a function named `showBookInfo` that accepts a book object and
-     *   outputs the information described above. Refactor your loop to use your
-     *   `showBookInfo` function.
-     */
-
-})();
+})

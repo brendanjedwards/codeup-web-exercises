@@ -36,15 +36,12 @@
 
 //Counting Down
 
-console.log(startingPoint);
-console.log(dropByFive);
+var counter = 5;
+var num = 105
+while (counter <= 24){
+    num -= 5;
+    console.log(num)
 
-function startingPoint() {
+    counter++
 }
-    let i = 100;
 
-    function dropByFive(){
-        return (i - 5)
-            (`let i = 100; i - 5;`);
-}
-console.log();

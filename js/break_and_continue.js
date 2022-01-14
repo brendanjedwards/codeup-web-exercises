@@ -34,3 +34,22 @@
 // Here is an odd number: 47
 // Here is an odd number: 49
 
+let userNumber = parseInt(prompt("Provide an odd number."));
+do {
+  userNumber = parseInt(prompt("Provide an odd number."));
+  if (userNumber% 2 === 1){
+      break;
+  }
+}
+while (!userNumber && userNumber% 2 === 0)
+
+let counter = 1;
+while (counter <= 50){
+    if (userNumber === counter){
+        console.log(`Yikes! Skipping Number: ${userNumber}`);
+    }
+    if (userNumber%2 === 1){
+        console.log(`Here is an odd number: ${counter}`);
+    }
+    counter++;
+}

@@ -20,8 +20,14 @@
 // 32768
 // 65536
 
-console.log(startingNumber())
-function =
+var counter = 1;
+var num = 1
+while (counter <= 16){
+    num *= 2;
+    console.log(num)
+
+    counter++
+}
 
 // Do While Loop
 // An ice cream seller can't go home until she sells all of her cones. First write enough code that generates a random

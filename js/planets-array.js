@@ -19,22 +19,29 @@
      */
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
+    planets.unshift("The Sun")
     console.log(planets);
 
     console.log('Adding "Pluto" to the end of the planets array.');
+    planets.push("Pluto")
     console.log(planets);
 
-    console.log(addPluto);
-    function addPluto(){
-        let (i = Pluto, add(Pluto, Planets)){
-
-        }
-    }
-}
 
 
-//     console.log('Removing "The Sun" from the beginning of the planets array.');
-//     console.log(planets);
+    // console.log(addPluto);
+    // function addPluto(i){
+    //     let addPluto = +i){
+    //
+    //     } add(Planets + i);{
+    //
+    //     }
+    //}
+// }
+
+
+    console.log('Removing "The Sun" from the beginning of the planets array.');
+    planets.shift()
+    console.log(planets);
 //
 //     console.log('Removing "Pluto" from the end of the planets array.');
 //     console.log(planets);
@@ -46,4 +53,4 @@
 //
 //     console.log("Sorting the planets array.");
 //     console.log(planets);
-// })();
+})();
