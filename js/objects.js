@@ -11,12 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-let person = {
-    firstName: 'John',
-    lastName: 'Smith'
-}
-console.log(person.firstName);
-console.log(person.lastName);
+    let person = {
+        firstName: 'John',
+        lastName: 'Smith'
+    }
+    console.log(person.firstName);
+    console.log(person.lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -27,10 +27,10 @@ console.log(person.lastName);
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-person.sayHello = function (){
-    return `Hello from ${this.firstName} ${this.lastName}`;
-}
-console.log(person.sayHello())
+    person.sayHello = function () {
+        return `Hello from ${this.firstName} ${this.lastName}`;
+    }
+    console.log(person.sayHello())
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -47,15 +47,15 @@ console.log(person.sayHello())
      */
 
     let shoppers = [
-    {name: 'Cameron', amount: 180},
-    {name: 'Ryan', amount: 250},
-    {name: 'George', amount: 320},
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320},
     ];
 
-    shoppers.forEach(function (shopper){
+    shoppers.forEach(function (shopper) {
         let discountedAmount = shopper.amount
         let discount;
-        if (shopper.amount < 200){
+        if (shopper.amount < 200) {
             discount = 12;
             discountedAmount = .88 * shopper.amount;
         }
@@ -112,15 +112,18 @@ console.log(person.sayHello())
             }
         },
     ]
-    {
-        let(index){
-        function index(number){
-        books.forEach(function (book, index){
-            console.log('Book # ' + (index + 1))
-            console.log('Title ' * books.title)
-            console.log('Author ' + book.author.firstName + ' ' + book.author.lastName)
-            console.log('---')
-        })
+    // {
+    // let(index){
+    // function index(number){
+    books.forEach(function (book, index) {
+        console.log('Book # ' + (index + 1))
+        console.log('Title ' + book.title)
+        console.log('Author ' + book.author.firstName + ' ' + book.author.lastName)
+        console.log('---');
+    });
+    //     }
+    // }
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -144,5 +147,4 @@ console.log(person.sayHello())
      *      ---
      *      ...
      */
-
-})
+})();
