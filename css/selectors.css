@@ -1,5 +1,15 @@
 /* selector for id="container" */
-selector-todo {
+
+.fancy-header {
+    color: blue;}
+.extra-large {
+    font-size: 200px;}
+selector {
+    property1: fancy-header;
+    property2: extr-large;
+}
+
+.container{
     margin: 50px auto;
     width: 500px;
     padding: 10px;
@@ -8,7 +18,7 @@ selector-todo {
 /*  selector for all "h1" elements
     that are a descendent of id="container"
     and have a class of "fancy-header" */
-selector-todo {
+{
     color: blue;
     text-decoration: underline;
 }
