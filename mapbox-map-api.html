@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Mapbox Map</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            width: 99%;
+            height: 680px;
+            border: black solid 2px;
+            margin-left: .5em;
+            margin-right: .8em;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+<h1>My First Mapbox Map!</h1>
+
+<div id='map'></div>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/matbox-geocoder-utils.js"></script>
+<script src="js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        // zoom: 5,
+        // zoom: 15,
+        // zoom: 20,
+        center: [-98.4916, 29.4252]
+    });
+    var marker = new mapboxgl.Marker().setLngLat([-98.4916, 29.4252]).addTo(map)
+    var popup = new mapboxgl.Popup()
+        .setLngLat([-98.489615, 29.426827])
+        .setHTML("<p>Codeup Rocks!</p>")
+        .addTo(map)
+    var marker = new mapboxgl.Marker().setLngLat([-98.5924, 29.4857]).addTo(map)
+    var popup = new mapboxgl.Popup()
+        .setLngLat([-98.5924, 29.4857])
+        .setHTML ("<p>Las Palapas is The Best!</p>")
+        .addTo(map)
+    var marker = new mapboxgl.Marker().setLngLat([-98.5924, 29.4857]).addTo(map)
+</script>
+<!--<script>-->
+<!--    $( "#reveal" ).click(function(marker) {-->
+<!--        marker.preventDefault()-->
+<!--        $( "popup" ).toggleClass( "invisible" );-->
+<!--    });-->
+<!--</script>-->
+<!--1.Make sure the info window does not display until the marker has been clicked on.-->
+<!--2.Refactor your code to display at least three of your favorite restaurants with information about each. Create an array -->
+<!--    of objects with information about each restaurant to accomplish this. Use a .forEach() loop rather than a for loop.-->
+</body>
+</html>

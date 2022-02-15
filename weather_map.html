@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+</head>
+<body>
+<h1>Weather Map</h1>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+    #map {
+        width: 1400px;
+        height: 640px;
+        border: black solid 2px;
+        margin-left: .5em;
+        margin-right: .8em;
+        align-content: center;
+    }
+</style>
+<div id="map"></div>
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<!--<script src="js/matbox-geocoder-utils.js"></script>-->
+<script src="js/keys.js"></script>
+<script>
+    var weatherUrl = 'https://api.openweathermap.org/data/2.5/onecall';
+    var weatherOptions = {
+        lat: 29.2421,
+        lon: -98.4936,
+        appid: OPENWEATHER_API_KEY,
+            units: 'imperial'
+    };
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        // zoom: 5,
+        // zoom: 15,
+        // zoom: 20,
+        center: [-98.4916, 29.4252]
+    });
+    var marker = new mapboxgl.Marker({
+        draggable: true
+    }).setLngLat([-98.4916, 29.4252]).addTo(map)
+    // var popup = new mapboxgl.Popup()
+    //     .setLngLat([-98.489615, 29.426827])
+    //     .setHTML("<p>Codeup Rocks!</p>")
+    //     .addTo(map)
+    // var marker = new mapboxgl.Marker().setLngLat([-98.5924, 29.4857]).addTo(map)
+    // var popup = new mapboxgl.Popup()
+    //     .setLngLat([-98.5924, 29.4857])
+    //     .setHTML ("<p>Las Palapas is The Best!</p>")
+    //     .addTo(map)
+    // var marker = new mapboxgl.Marker().setLngLat([-98.5924, 29.4857]).addTo(map)
+    function onDragEnd() {
+        const lngLat = marker.getLngLat();
+        // coordinates.style.display = 'block';
+        // coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+        console.log(lngLat)
+    //    Need to update lat and lng in weatherOptions
+        weatherOptions.lng = lngLat.lng
+        weatherOptions.lat = lngLat.lat
+    //    Call pullWeather Function
+        pullWeather()
+    }
+    marker.on('dragend', onDragEnd);
+    function pullWeather(){
+        $.get(weatherUrl,weatherOptions).done(
+            function (parameterData){
+                console.log(parameterData)
+            }
+        )
+    }
+    pullWeather([-98.5924, 29.4857])
+</script>
+<div id="forecast-row" class="row">
+    <table>
+    <tr><th>Day 0</th> <th>Day 1</th> <th>Day 2</th> <th>Day 3</th> <th>Day 4</th></tr>
+    <tr><td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td></tr>
+    <tr><td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td></tr>
+    <tr><td>0</td> <td>1</td> <td>2</td> <td>3</td> <td>4</td></tr>
+    </table>
+</div>
+</body>
+</html>

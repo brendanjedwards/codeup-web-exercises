@@ -7,13 +7,15 @@
 <h1>Konami Code</h1>
 <script src="/js/jquery.js"></script>
 <script>
+    $(document.body).css( "background", "black" );
+</script>
+<script>
     "use strict";
     $(document).keyup(function(event){
         console.log(event.keyCode);
         let konamiArray=[]
             let konamIndex=0
-    }
-    });
+    })
 //NOTE TO SELF: Ideal Objectives, if possible within reason...
     //Make it possible for the screen to be able to detect physical "key-input".
     //Set a time limit to the delay-time between button-presses, reset if unable.

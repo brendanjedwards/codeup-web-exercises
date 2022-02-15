@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery FAQ</title>
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+<h2>Frequently Asked Questions</h2>
+<h3>
+<dl>
+   <dt>What government agency oversees the National Park Service?</dt></h3>
+<b><dd class="invisible">The National Park Service is a bureau of the Department of the Interior.</dd></b>
+<h3><dt>How many employees are in the National Park Service?</dt></h3>
+        <dd class="invisible">Permanent, temporary, and seasonal employees: Approximately 20,000.</dd>
+<h3><dt>How old is the National Park System?</dt></h3>
+        <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
+<h3><dt>What is the origin of the National Park Service arrowhead?</dt></h3>
+        <dd class="invisible">The arrowhead was authorized as the official National Park Service emblem by the Secretary of the Interior on July 20, 1951. </dd>
+<h3><dt>How many areas are in the National Park System?</dt></h3>
+        <dd class="invisible">The system includes 423 areas covering more than 85 million acres in every state.</dd>
+<h3><dt>How do I obtain a park entrance pass?</dt></h3>
+        <dd class="invisible">Fewer than one-third of the national parks charge entrance fees.</dd>
+<h3><dt>Where can I find a park map?</dt></h3>
+        <dd class="invisible">You can view maps on specific park websites or find national park, National Park System, National Trails System, and other maps.</dd>
+<h3><dt>How do I make reservations for camping/lodging in national parks?</dt></h3>
+        <dd class="invisible">For campground reservations, visit Recreation.gov.</dd>
+<h3><dt>How do I reserve a tour in a park?</dt></h3>
+        <dd class="invisible">You can book some park tours through Recreation.gov.</dd>
+</dl>
+
+<p><a href="#" id="reveal">Click to show answers</a></p>
+<br>
+<h3>Yellowstone</h3>
+<ul>1</ul>
+<ul>2</ul>
+<ul>3</ul>
+<ul>4</ul>
+<h3>Yosemite</h3>
+<ul>1</ul>
+<ul>2</ul>
+<ul>3</ul>
+<ul>4</ul>
+<h3>Redwood</h3>
+<ul>1</ul>
+<ul>2</ul>
+<ul>3</ul>
+<ul>4</ul>
+
+<p><a href="#" id="highlight">Click to highlight answers</a>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    $( "#reveal" ).click(function(event) {
+        event.preventDefault()
+        $( "dd" ).toggleClass( "invisible" );
+    });
+</script>
+            <script>
+                $( "#reveal" ).click(function(event) {
+                    event.preventDefault()
+                    $( "ul" ).toggleClass( "highlight" );
+                });
+            </script>
+</body>
+</html>
+<!--TODO: Create a button that, when clicked, makes the last li in each ul have a yellow background.-->
+<!--TODO: When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.-->
+<!--TODO: When any list item is clicked, first li of the parent ul should have a font color of blue.-->

@@ -1,0 +1,2 @@
+var OPENWEATHER_API_KEY='f7c8a0c73ea30c23937aa22aa0b1c043';
+var MAPBOX_API_KEY='pk.eyJ1IjoiYnJlbmRhbmVkd2FyZHMiLCJhIjoiY2t6aXF6eTdpMDJobjJubXFwaTdjcDVkMyJ9.tQlMxmquKzPHo98XwmL-3w';
