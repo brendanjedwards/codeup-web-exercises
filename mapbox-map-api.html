@@ -12,7 +12,7 @@
             margin-left: .5em;
             margin-right: .8em;
             align-content: center;
-        }
+         }
     </style>
 </head>
 <body>
@@ -34,17 +34,23 @@
         // zoom: 20,
         center: [-98.4916, 29.4252]
     });
+    map.on('click', 'places', (e) => {
+        const ([-98.489615, 29.426827]) = e.features[0].geometry.coordinates.slice();
+        const description = e.features[0].properties.description;
     var marker = new mapboxgl.Marker().setLngLat([-98.4916, 29.4252]).addTo(map)
     var popup = new mapboxgl.Popup()
         .setLngLat([-98.489615, 29.426827])
         .setHTML("<p>Codeup Rocks!</p>")
         .addTo(map)
     var marker = new mapboxgl.Marker().setLngLat([-98.5924, 29.4857]).addTo(map)
-    var popup = new mapboxgl.Popup()
+    var popup = new mapboxgl.Popup(
         .setLngLat([-98.5924, 29.4857])
         .setHTML ("<p>Las Palapas is The Best!</p>")
         .addTo(map)
     var marker = mapboxgl.Marker().drag
+</script>
+<script>
+
 </script>
 <!--<script>-->
 <!--    $( "#reveal" ).click(function(marker) {-->

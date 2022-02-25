@@ -2,26 +2,51 @@
 <html>
 <head>
     <title>Konami Code</title>
+    <style>
+        body{
+            color:white;
+            background-color: black;
+        }
+    </style>
 </head>
-<body>
 <h1>Konami Code</h1>
-<script src="/js/jquery.js"></script>
+<script src="js/jquery-2.2.4.js"></script>
+<div>
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Nes_controller.svg/640px-Nes_controller.svg.png' alt='alt tag'>
+    <br>
+<h3>W = "Up", A = "Left", S = "Right", Z = "Down", K = "B", L = "A", Space = "Start"</h3>
+</div>
+<div>
 <script>
-    $(document.body).css( "background", "black" );
-</script>
-<script>
-    "use strict";
+    "use strict"
+$('body').css({'textAlign': 'center'})
+    let konamicode = [87, 87, 90, 90, 65, 83, 65, 83, 32]
+    let keyspressed = []
     $(document).keyup(function(event){
-        console.log(event.keyCode);
-        let konamiArray=[]
-            let konamIndex=0
+        keyspressed.push(event.keyCode)
+        console.log(keyspressed);
+        if (keyspressed.length > konamicode.length) {
+            keyspressed.shift()
+        }
+        if (arraysEqual(keyspressed, konamicode)=== true){
+            console.log("SUCCESS!")
+        }
+        // let konamiiArray=[]
+        //     let konamiIndex=0
     })
-//NOTE TO SELF: Ideal Objectives, if possible within reason...
-    //.Make it possible for the screen to be able to detect physical "key-input".
-    //.Set a time limit to the delay-time between button-presses, reset if unable.
-    //.Insert a "trigger" in the html to cause a reaction to a successful entry.
-    //.Have the "reaction" do something- ie, show a new screen, play music and/or video, etc.
-    //.The overall experience should have a degree of old-school Nintendo aesthetic.
+    function arraysEqual(a, b) {
+        if (a === b) return true;
+        if (a == null || b == null) return false;
+        if (a.length !== b.length) return false;
+
+        for (var i = 0; i < a.length; ++i) {
+            if (a[i] !== b[i]) return false;
+        }
+        return true;
+    }
 </script>
-</body>
+</div>
+<!--NOTE TO SELF: Ideal Objectives, if possible within reason...-->
+<!--    Insert a "trigger" in the html to cause a reaction to a successful entry- ie, show a new screen, play music
+        and/or video, etc. The overall experience should have a degree of old-school Nintendo aesthetic.-->
 </html>

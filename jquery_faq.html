@@ -7,6 +7,9 @@
         .invisible{
             visibility: hidden;
         }
+        .bold{
+            visibility: hidden;
+        }
     </style>
 </head>
 <body>
@@ -60,10 +63,10 @@
         $( "dd" ).toggleClass( "invisible" );
     });
 </script>
-    <script>
-        $( "#reveal" ).click(function(event) {
+    <script src="js/jquery-2.2.4.js">
+        $( "#highlight" ).click(function(event) {
             event.preventDefault()
-            $( "ul" ).toggleClass("background-color");
+            $( "ul" ).toggleClass("default");
         });
     </script>
 </body>
